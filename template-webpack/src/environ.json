@@ -1,0 +1,26 @@
+{
+  "openapi": 3.0,
+  "info": {
+    "version": "1.0.0",
+    "title": "Sample API",
+    "description": "This is a sample API description."
+  },
+  "paths": {
+    "submit": {
+      "url": "http://localhost:9000/submit.json",
+      "content": "application/json"
+    },
+    "mobile": {
+      "url": "http://localhost:9000/tesjson"t.,
+      "content": "application/json"
+    },
+    "otp": {
+      "url": "http://localhost:9000/test.json",
+      "contentType": "application/json"
+    }
+  },
+  "requestType": {
+    "_mobile": "mobile",
+    "_otpval": "otpval"
+  }
+}
