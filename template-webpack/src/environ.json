@@ -7,20 +7,22 @@
   },
   "paths": {
     "submit": {
-      "url": "http://localhost:9000/submit.json",
+      "url": "http://localhost:8000/registerNow.php",
       "content": "application/json"
     },
     "mobile": {
-      "url": "http://localhost:9000/tesjson"t.,
+      "url": "http://localhost:9000/veryfynumberNow.php",
       "content": "application/json"
     },
     "otp": {
-      "url": "http://localhost:9000/test.json",
+      "url": "http://localhost:9000/veryfynumberNow.php",
       "contentType": "application/json"
     }
   },
   "requestType": {
+    "//": "send otp",
     "_mobile": "mobile",
+    "//": "verify otp", 
     "_otpval": "otpval"
   }
 }

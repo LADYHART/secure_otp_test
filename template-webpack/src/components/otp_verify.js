@@ -39,32 +39,34 @@ export default function handleOTP() {
 
   $("#otpsubmitForm").on("submit", function (e) {
     e.preventDefault();
-    $("#otpform").valid();
-    /**TODO: implement Fetch api*/
-    fetch(endpoint.paths.otp.url, {
-      method: "POST",
-      headers: {
-        "Content-Type": endpoint.paths.otp.contentType,
-      },
-      body: JSON.stringify({
-        type: endpoint.requestType._otpval,
-        otp: document.getElementById("otp").value,
-      }),
-    })
-      .then(function (response) {
-        if (response.ok) {
-          /** TODO: display message or make transition to form */
-          //document.getElementById("successMessage").style.display = "block";
-          return response.json(); // Return response data if needed
-        } else {
-          /** FIXME: show error on screen */
-          throw new Error("Failed to submit mobile number");
-        }
+
+    if ($("#otpform").valid()) {
+      fetch(endpoint.paths.otp.url, {
+        method: "POST",
+        headers: {
+          "Content-Type": endpoint.paths.otp.contentType,
+        },
+        body: JSON.stringify({
+          type: endpoint.requestType._otpval,
+          otp: document.getElementById("otp").value,
+        }),
       })
-      .catch(function (error) {
-        /** FIXME: show error on screen */
-        console.error("Error:", error);
-      });
+        .then(function (response) {
+          if (response.ok) {
+            /** TODO: display message or make transition to form */
+            //document.getElementById("successMessage").style.display = "block";
+            return response.json(); // Return response data if needed
+          } else {
+            /** FIXME: show error on screen */
+            throw new Error("Failed to submit mobile number");
+          }
+        })
+        .catch(function (error) {
+          /** FIXME: show error on screen */
+          console.error("Error:", error);
+        });
+    }
+    // throw  Error
   });
 
   $("#reg_otp").on("click", function () {
