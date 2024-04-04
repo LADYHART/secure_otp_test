@@ -20,38 +20,6 @@ This repository contains code for integrating an SMS gateway into the project to
 // Send SMS
 $result = SmsApi::send('+1234567890', '74749');
 
-Sure, I've added a "Contribute" section to the README.md file:
-
-markdown
-
-# SMS Gateway Integration
-
-This repository contains code for integrating an SMS gateway into your project. With this integration, you can send SMS messages programmatically from your application.
-
-## Usage
-
-1. Clone this repository to your local machine.
-
-2. Install the required dependencies.
-
-3. Configure the SMS gateway credentials in the `config.php` file.
-
-4. Use the provided functions in your code to send SMS messages.
-
-## Example
-
-```php
-require_once 'sms.php';
-
-// Send SMS
-$result = sendSMS('+1234567890', 'Hello, this is a test message.');
-
-if ($result['success']) {
-    echo "Message sent successfully!";
-} else {
-    echo "Failed to send message. Error: " . $result['error'];
-}
-
 ## Configuration
 
 In the config.php file, provide your SMS gateway credentials:
@@ -75,7 +43,7 @@ Contributions are welcome! Here are some ways you can contribute:
 - Suggest new features
 - Fix issues and submit pull requests
 
-Contributors:
+### Contributors:
 ![LADYHART](https://github.com/LADYHART.png?size=50)
 [LADYHART](https://github.com/LADYHART)
 
