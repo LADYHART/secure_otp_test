@@ -76,8 +76,7 @@ Contributions are welcome! Here are some ways you can contribute:
 - Fix issues and submit pull requests
 
 Contributors:
-- LADYHART ![LADYHART](https://github.com/LADYHART.png?size=50)
-
-- [LADYHART](https://github.com/LADYHART)
+![LADYHART](https://github.com/LADYHART.png?size=50)
+[LADYHART](https://github.com/LADYHART)
 
 This section now includes a list of contributors, with "LADYHART" as the first contributor. You can add more contributors in a similar format as needed.
