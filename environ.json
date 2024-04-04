@@ -1,9 +1,43 @@
 {
-  "request_type": { "_mobile": "mobile", "_otpval": "otpval" },
-  "guescolourresponse": {
+  "openapi": 3.0,
+  "info": {
+    "version": "1.0.0",
+    "title": "Sample API",
+    "description": "This is a sample API description."
+  },
+  "paths": {
+    "submit": {
+      "url": "http://localhost:8000/registerNow.php",
+      "content": "application/json"
+    },
+    "mobile": {
+      "url": "http://localhost:9000/veryfynumberNow.php",
+      "content": "application/json"
+    },
+    "otp": {
+      "url": "http://localhost:9000/veryfynumberNow.php",
+      "contentType": "application/json"
+    }
+  },
+  "requestType": {
+    "//": "send otp",
+    "_mobile": "mobile",
+    "//": "verify otp",
+    "_otpval": "otpval"
+  },
+  "responseCode": {
     "success": 0,
     "waitforverify": 1,
     "failed": 2,
-    "invalid_number": 4
+    "invalidNumber": 4
+  },
+  "config": {
+    "smsapi": {
+      "senderID": "F2SMS",
+      "authKey": "--SMS_AUTH_KEY--",
+      "flushSMS": false,
+      "gatewayName": "smsapi:fast2sms.com",
+      "apiCallType": "restapi"
+    }
   }
 }
